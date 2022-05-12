@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7daf64d1-ad52-42d9-85f1-7a2c804d2494" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Module_3/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_3/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/ExampleConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/ExampleConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/ExampleProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/ExampleProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/Pipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/SlowConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/SlowConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/TransactionalConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/TransactionalConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/TransactionalProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module_4/solution/src/main/java/com/luxoft/eas026/module3/TransactionalProducer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26rqP4Nft44xnN97U5xgdRVZIIG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7daf64d1-ad52-42d9-85f1-7a2c804d2494" name="Changes" comment="" />
+      <created>1648192028849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648192028849</updated>
+    </task>
+    <servers />
+  </component>
+</project>

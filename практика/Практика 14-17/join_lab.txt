@@ -1,0 +1,16 @@
+1. Create two topics:
+ 
+ docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic Payments --partitions 10
+
+ docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic PayedPurchases --partitions 10
+
+
+2. Run com.luxoft.eas026.streams.JoinPurchasePayments
+  
+  The application must be running
+  
+  
+3. Run JoinPurchasePaymentDriver. This will generate values into Payments 
+
+
+4. Check the topic PayedPurchases

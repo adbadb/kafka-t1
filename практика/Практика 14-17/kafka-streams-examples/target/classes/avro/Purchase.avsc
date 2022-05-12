@@ -1,0 +1,27 @@
+{
+  "namespace": "com.luxoft.eas026.streams",
+  "type": "record",
+  "name": "Purchase",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "name": "product",
+      "type": "string"
+    },
+    {
+      "name": "amount",
+      "type": "long"
+    },
+    {
+      "name": "sum",
+      "type": "float"
+    },
+    {
+      "name": "customerId",
+      "type": "long"
+    }
+  ]
+}

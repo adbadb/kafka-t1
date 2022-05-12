@@ -1,0 +1,14 @@
+1. Create topic:
+
+ docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic UpperTextLineProcessor --partitions 10
+ 
+ 
+2. Run com.luxoft.eas026.streams.UpperCaseProcessorExample
+
+  The application must be running
+
+  
+3. Check the topic UpperTextLineProcessor
+
+
+ docker exec -ti kafka /usr/bin/kafka-console-consumer --bootstrap-server kafka:19092 --topic UpperTextLineProcessor --from-beginning

@@ -1,0 +1,15 @@
+{
+  "namespace": "com.luxoft.eas026.streams",
+  "type": "record",
+  "name": "Payment",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "name": "purchaseId",
+      "type": "long"
+    }
+  ]
+}

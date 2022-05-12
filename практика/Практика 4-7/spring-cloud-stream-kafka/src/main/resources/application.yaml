@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    function:
+      definition: send;receive
+    stream:
+      bindings:
+        send-out-0:
+          destination: topic3
+        receive-in-0:
+          destination: topic3
+          consumer:
+            concurrency: 2
+      kafka:
+          binder:      
+            brokers: ":9092,:9093,:9094" 
+            producerProperties:
+               acks: "all"
+            consumerProperties:
+               auto.offset.reset: "earliest" 
+                           

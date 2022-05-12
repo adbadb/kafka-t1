@@ -1,0 +1,38 @@
+1. Get cluster Id
+
+curl localhost:8082/v3/clusters
+
+
+2. Create topic
+
+curl -X POST -H "Content-Type: application/json" --data '{"topic_name": "my-topic"}' "http://localhost:8082/v3/clusters/<cluster-id>/topics"
+
+
+3. Describe topic
+
+curl -X GET http://localhost:8082/v3/clusters/<cluster-id>/topics/my-topic
+
+
+4. List all topics 
+
+curl -X GET http://localhost:8082/v3/clusters/<cluster-id>/topics
+
+5. Send data 
+
+curl -X POST -H "Content-Type: application/json" --data '{ "key": { "type": "JSON", "data": "key2" }, "value": { "type": "JSON", "data": "value2" } }' "http://localhost:8082/v3/clusters/<cluster-id>/topics/my-topic/records"
+
+6. Create a consumer group
+
+curl -X POST -H "Content-Type: application/vnd.kafka.v2+json"  --data '{"name": "myconsumer1", "format": "json", "auto.offset.reset": "earliest"}'   http://localhost:8082/consumers/mygroup
+
+7. Create subscription
+
+curl -X POST -H "Content-Type: application/vnd.kafka.v2+json" --data '{"topics":["my-topic"]}' http://localhost:8082/consumers/mygroup/instances/myconsumer1/subscription
+
+8. Get messages
+
+curl -X GET  -H "Accept: application/vnd.kafka.json.v2+json" http://localhost:8082/consumers/mygroup/instances/myconsumer1/records 
+
+9. Delete consumer group
+
+curl -X DELETE  -H "Content-Type: application/vnd.kafka.v2+json"  http://localhost:8082/consumers/mygroup/instances/myconsumer1

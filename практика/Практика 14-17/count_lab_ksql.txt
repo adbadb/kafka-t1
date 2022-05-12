@@ -1,0 +1,22 @@
+1. Run the commands inside KSQL
+
+CREATE STREAM NUMBERS (num INT) WITH (KAFKA_TOPIC='numbers', PARTITIONS=1, VALUE_FORMAT='JSON');
+
+
+2. Insert some values
+
+INSERT INTO NUMBERS (num) VALUES (1);
+INSERT INTO NUMBERS (num) VALUES (2);
+INSERT INTO NUMBERS (num) VALUES (1);
+INSERT INTO NUMBERS (num) VALUES (0);
+INSERT INTO NUMBERS (num) VALUES (2);
+INSERT INTO NUMBERS (num) VALUES (2);
+
+
+
+3. SET 'auto.offset.reset' = 'earliest';
+
+
+4. 
+
+SELECT num, COUNT(num) AS cat FROM NUMBERS GROUP BY num EMIT CHANGES;

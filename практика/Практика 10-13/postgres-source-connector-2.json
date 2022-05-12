@@ -1,0 +1,22 @@
+{ "name": "jdbc-source-connector-2", 
+  "config": 
+    {"connector.class": "JdbcSource", 
+     "tasks.max": 1,
+     "topic.prefix": "connect-jdbc-2-",
+     "connection.url": "jdbc:postgresql://postgres:5432/shop",
+     "mode": "incrementing", 
+     "incrementing.column.name":"id",
+     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+     "value.converter.schemas.enable":"true", 
+     "table.whitelist" : "public.products",
+     "connection.user": "demo", 
+     "connection.password" : "demo",
+     "transforms" : "createKey,extractInt,RenameField",
+     "transforms.createKey.type":"org.apache.kafka.connect.transforms.ValueToKey",
+     "transforms.createKey.fields":"id",
+     "transforms.extractInt.type":"org.apache.kafka.connect.transforms.ExtractField$Key",
+     "transforms.extractInt.field":"id",
+     "transforms.RenameField.type" : "org.apache.kafka.connect.transforms.ReplaceField$Value",
+     "transforms.RenameField.renames" : "name:code"
+    }
+}

@@ -1,0 +1,15 @@
+1. Create two topics:
+
+docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic Purchases --partitions 10
+ 
+docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic PurchaseStatistics --partitions 10
+ 
+ 
+2. Run com.luxoft.eas026.streams.PurchaseStatisticsExample
+
+  The application must be running
+  
+3. Run com.luxoft.eas026.streams.PurchaseStatisticsDriver
+
+
+4. Check the topic PurchaseStatistics

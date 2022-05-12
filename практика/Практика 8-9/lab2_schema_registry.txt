@@ -1,0 +1,137 @@
+1. Launch Confluent Control Center
+
+http://localhost:9021/
+
+2. Select cluster
+
+3. In the left menu select Topics and click "Add a topic" button
+
+- Topic name : topic1
+- Number of partitions 5
+
+Under customise settings
+
+- replication factor: 1
+
+Then save
+
+4. On Schema tab Set Avro Schema for value
+
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    }
+  ],
+  "name": "Customer",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
+
+6. Get all the subjects
+
+curl -X GET http://localhost:8081/subjects
+
+
+7. Get schema by global id
+
+curl -X GET http://localhost:8081/schemas/ids/1
+
+8. Get all the versions
+
+curl -X GET http://localhost:8081/subjects/topic1-value/versions/
+
+9. Get schema by version
+
+ curl -X GET http://localhost:8081/subjects/topic1-value/versions/1
+
+10. Check compatibility level
+
+ curl -X GET http://localhost:8081/config
+
+11. Try to set new schema
+
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "score",
+      "type": "int"
+    }
+  ],
+  "name": "Customer",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
+
+An error happens
+
+12. Add score attribute as a default 
+
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "default": 0,
+      "name": "score",
+      "type": "int"
+    }
+  ],
+  "name": "Customer",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
+
+13. Try rename attribute 
+
+{
+  "fields": [
+    {
+      "name": "other_name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "default": 0,
+      "name": "score",
+      "type": "int"
+    }
+  ],
+  "name": "Customer",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
+
+14. Change compatibility level 
+
+curl -X PUT -H "Content-Type: application/vnd.schemaregistry.v1+json"  --data '{"compatibility": "None"}' http://localhost:8081/config/topic1-value
+
+15. Try to save the new schema again
+
+16. Set compatibility level back
+
+curl -X PUT -H "Content-Type: application/vnd.schemaregistry.v1+json"  --data '{"compatibility": "BACKWARD"}' http://localhost:8081/config/topic1-value
+
+

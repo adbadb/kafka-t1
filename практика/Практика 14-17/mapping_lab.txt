@@ -1,0 +1,20 @@
+1. Create two topics:
+
+ docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic TextLinesTopic --partitions 10
+ 
+docker exec -ti kafka /usr/bin/kafka-topics --create --bootstrap-server kafka:19092 --topic UppercasedTextLinesTopic --partitions 10
+ 
+2. Run com.luxoft.eas026.streams.MapFunctionLambdaExample
+
+  The application must be running
+  
+3. Run com.luxoft.eas026.streams.MapFunctionLambdaDriver or
+
+  produce some values with the console producer
+  
+  docker exec -ti kafka /usr/bin/kafka-console-producer --bootstrap-server kafka:19092 --topic TextLinesTopic
+  
+4. Check the topic UppercasedTextLinesTopic
+
+
+ docker exec -ti kafka /usr/bin/kafka-console-consumer --bootstrap-server kafka:19092 --topic UppercasedTextLinesTopic --from-beginning
